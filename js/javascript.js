@@ -6,10 +6,16 @@ const osm =
       })
 osm.addTo(map)
 
+function popUPinfo(feature, layer) {
+      layer.bindPopup(feature.properties.NIMI)
+}
+
 async function addDistrictsGeoJson(url) {
       const response = await fetch(url)
       const data = await response.json()
-      const polygons = L.geoJson(data)
+      const polygons = L.geoJson(data {
+                                 onEachFeature: popUPinfo,
+                                 })
       polygons.addTo(map)
 }
 addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
