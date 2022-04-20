@@ -4,4 +4,5 @@ const osm =
        maxZoom: 19,
        attribution: 'OpenStreetMap contributors',
       })
+
 osm.addTo(map)
