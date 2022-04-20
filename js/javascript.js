@@ -5,3 +5,11 @@ const osm =
       attribution: 'OpenStreetMap contributors',
       })
 osm.addTo(map)
+
+async function addDistrictsGeoJson(url) {
+ const response = await fetch(url)
+ const data = await response.json()
+ const polygons = L.geoJson(data)
+ polygons.addTo(map)
+}
+addDistrictsGeoJson('geojson/tartu_city_districts_edu.geojson')
