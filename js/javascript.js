@@ -5,6 +5,7 @@ const osm =
       attribution: 'OpenStreetMap contributors',
       })
 osm.addTo(map)
+
 async function addDistrictsGeoJson(url) {
       const response = await fetch(url)
       const data = await response.json()
