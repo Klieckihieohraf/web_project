@@ -25,7 +25,7 @@ async function addGeoJson(url) {
       }).addTo(map)
 }
 
-addGeoJson('geojson/tartu_city_celltowers_edu.geojson')
+addGeoJson('geojson/tartu_city_districts_edu.geojson')
 
 function defaultMapSettings() {
       map.setView([58.373523, 26.716045], 12)
