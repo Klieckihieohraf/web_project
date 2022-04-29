@@ -13,14 +13,14 @@ async function addGeoJson(url) {
             valueProperty: 'OBJECTID',
             scale: ['#ffffff', '#FF4D99'],
             steps: 5,
-            mode: 'e', // q for quantile, e for equidistant
+            mode: 'e',
             style: {
                   color: '#fff',
-                  weight: 2,
+                  weight: 1.5,
                   fillOpacity: 0.8,
             },
             onEachFeature: function (feature, layer) {
-                  layer.bindPopup('Value: ' + feature.properties.TOWERS)
+                  layer.bindPopup('Number of cell towers: ' + feature.properties.TOWERS)
             },
       }).addTo(map)
 }
