@@ -13,7 +13,7 @@ async function addGeoJson(url) {
             valueProperty: 'OBJECTID',
             scale: ['#8000FF', '#F2E6FF'],
             steps: 5,
-            mode: 'e',
+            mode: 'q',
             style: {
                   color: '#fff',
                   weight: 1.5,
