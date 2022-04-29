@@ -11,7 +11,7 @@ async function addGeoJson(url) {
       const data = await response.json()
       L.choropleth(data, {
             valueProperty: 'OBJECTID',
-            scale: ['#ffffff', '#FF4D99'],
+            scale: ['#ffffff', '#8000FF'],
             steps: 5,
             mode: 'e',
             style: {
